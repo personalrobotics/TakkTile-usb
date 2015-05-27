@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>TakkTile-usb</name>
+    <version>1.0.0</version>
+    <description>
+        TakkTile usb drivers
+    </description>
+    <url>https://github.com/TakkTile/TakkTile-usb</url>
+    <author>itdaniher</author>
+    <maintainer email="it.daniher@gmail.com">Ian Daniher</maintainer>
+    <maintainer email="cliddick@andrew.cmu.edu">Clint Liddick</maintainer>
+    <license>GNU GPLv3+</license>
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>message_generation</build_depend>
+    <run_depend>python</run_depend>
+    <run_depend>numpy</run_depend>
+    <run_depend>rospy</run_depend>
+    <run_depend>std_msgs</run_depend>
+    <run_depend>std_srvs</run_depend>
+    <run_depend>geometry_msgs</run_depend>
+    <run_depend>message_runtime</run_depend>
+</package>
