@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/env python
 # (C) 2012 Biorobotics Lab and Nonolith Labs                                                                                                                                                    
 # Written by Ian Daniher
 # Licensed under the terms of the GNU GPLv3+
