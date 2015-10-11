@@ -93,11 +93,9 @@ class TakkTile:
 	def getDataRaw(self):
 		"""Query the TakkTile USB interface for the pressure and temperature samples from a specified row of sensors.."""
 		data = self.dev.read(0x81, 720, timeout=100)
-		try:
-			assert len(data) % 4 == 0
-			assert len(data)/4 == len(self.alive)
-		except:
-			raise Exception("data read from USB endpoint is not correct length")
+                if len(data) % 4 != 0 or len(data)/4 != len(self.alive):
+		    raise Exception("data read from USB endpoint is not correct length")
+
 		data = _chunk(data, 4)
 		# temperature is contained in the last two bytes of each four byte chunk, pressure in the first two
 		# each ten bit number is encoded in two bytes, MSB first, zero padded / left alligned
