@@ -41,6 +41,11 @@ class TakkTile:
 			self.devs.append(dev_dict[key])
 		self.UIDs=sorted(dev_dict.iterkeys())
 
+                if arrayID >= len(self.devs):
+                    raise ValueError(
+                        'arrayID is out of range: Requested {:d}, but there are'
+                        ' only {:d} devices.'.format(arrayID, len(self.devs)))
+
 		self.arrayID = arrayID
 		self.dev=self.devs[arrayID]
 
